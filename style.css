@@ -1,0 +1,31 @@
+body{
+	font-family: "Trebuchet MS", sans-serif;
+}
+p {
+	background-color: #D9005B;
+	padding: 1em;
+	color: #FFFFFF;
+}
+a:visited {
+	color: #5FDB25;
+}
+a:link {
+	color: #FFA773;
+}
+a:hover {
+	color: #BAF46E;
+}
+.header {
+	font-weight: bold;
+	font-size: 120%;
+}
+.header a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.info {
+	font-size: 75%;
+}
+img {
+  max-width: 100%;
+}
