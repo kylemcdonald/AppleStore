@@ -6,7 +6,7 @@
 		<link rel="stylesheet" href="style.css" type="text/css"/>
 	</head>
 	<body>
-		<p><span class="header"><a href="http://kylemcdonald.net/applestore/">Apple Store</a></span> is a <a href="http://fffff.at/speed-projects/">speed project</a> by <a href="http://kylemcdonald.net/">Kyle McDonald</a> that automatically posts a pictures of people staring at computers.</p>
+		<p><span class="header"><a href="http://kylemcdonald.net/applestore/">Apple Store</a></span> is a <a href="http://fffff.at/speed-projects/">speed project</a> by <a href="http://kylemcdonald.net/">Kyle McDonald</a> that automatically posts pictures of people staring at computers.</p>
 
 <?php
 $dir = opendir("images");
