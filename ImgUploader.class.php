@@ -28,7 +28,7 @@ class ImgUploader
   var $height_orig;
   var $num_type;
   var $errorCode = 0;
-  var $allow_types = array(IMAGETYPE_JPG);
+  var $allow_types = array(IMAGETYPE_JPEG);
   
   function __construct($fileArray)
   {
