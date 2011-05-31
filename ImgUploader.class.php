@@ -28,7 +28,7 @@ class ImgUploader
   var $height_orig;
   var $num_type;
   var $errorCode = 0;
-  var $allow_types = array(IMAGETYPE_PNG);
+  var $allow_types = array(IMAGETYPE_JPG);
   
   function __construct($fileArray)
   {
@@ -57,7 +57,7 @@ class ImgUploader
     //$this->num_type = exif_imagetype($this->tmp_name);
     @list($this->width_orig, $this->height_orig, $this->num_type) = getimagesize($this->tmp_name);
     
-    if(filesize($this->tmp_name) > (1024 * 4096)) // allows for 4MB
+    if(filesize($this->tmp_name) > (1024 * 128)) // allows for 128 KB
     {
       $this->errorCode = MAX_SIZE_EXCEDED;
       return false;

@@ -13,9 +13,7 @@
 				$ip = $_SERVER['REMOTE_ADDR'];
 				
 				$blocked = array(
-					"76.11.71.252",
-					"209.29.221.195",
-					"77.248.108.44"
+					// add any blocked addresses here
 				);
 
 				$logFilename = "log.txt";
@@ -52,7 +50,7 @@
 		</p>
 		<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
 			<p>
-				<input type="hidden" name="MAX_FILE_SIZE" value="4194304" />
+				<input type="hidden" name="MAX_FILE_SIZE" value="131072" />
 				<input type="file" name="file" />
 				<input type="submit" value="Upload File" />
 			</p>
