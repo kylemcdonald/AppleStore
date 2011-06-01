@@ -1,7 +1,11 @@
 <?php
+date_default_timezone_set('UTC');
 $logFilename = "ping.txt";
 $fh = fopen($logFilename, 'a');
-$ip = $_SERVER['REMOTE_ADDR'];
-fwrite($fh, time()."\t$ip\n");
+$remoteIp = $_SERVER['REMOTE_ADDR'];
+$headers = apache_request_headers(); 
+$internalIp = $headers["X-Forwarded-For"];
+$remoteHostName = $_SERVER['REMOTE_HOST'];
+fwrite($fh, date(time())."\t$remoteIp\t$internalIp\t$remoteHostName\n");
 fclose($fh);
 ?>
