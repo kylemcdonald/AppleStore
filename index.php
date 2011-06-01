@@ -26,7 +26,7 @@ $perPage = intval($_GET["perpage"]);
 $mode = $_GET["mode"];
 
 if(!$perPage) {
-	$perPage = 20;
+	$perPage = 60;
 }
 
 if(!$mode) {
