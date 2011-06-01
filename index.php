@@ -6,7 +6,7 @@
 		<link rel="stylesheet" href="style.css" type="text/css"/>
 	</head>
 	<body>
-		<p><span class="header"><a href="http://kylemcdonald.net/applestore/">Apple Store</a></span> is a <a href="http://fffff.at/speed-projects/">speed project</a> by <a href="http://kylemcdonald.net/">Kyle McDonald</a> that automatically posts pictures of people staring at computers.</p>
+		<p><span class="header"><a href="http://kylemcdonald.net/applestore/">Apple Store</a></span> is a project by <a href="http://kylemcdonald.net/">Kyle McDonald</a> that automatically posts pictures of people staring at computers.</p>
 
 <?php
 $dir = opendir("images");
@@ -34,7 +34,7 @@ if(!$mode) {
 }
 
 if($mode == "all") {
-	print("\t\t<p class=\"info\">$n people are staring at computers. <a href=\"?mode=each\">How many machines?</a></p>\n");
+	print("\t\t<p class=\"info\">$n people are staring at computers. <a href=\"?mode=each\">How many locations?</a></p>\n");
 
 	// pagination could be cleaner, it's weird because i was doing it very wrong before
 	for($i = 0; $i < $perPage;) {
@@ -68,14 +68,13 @@ if($mode == "all") {
 	$ipCounts = array_count_values($ips);
 	$uniqueCount = count($ipCounts);
 
-	print("\t\t<p class=\"info\">$uniqueCount computers are staring at people. <a href=\"?mode=all\">How many people?</a></p>\n");
+	print("\t\t<p class=\"info\">People are staring at computers in $uniqueCount locations. <a href=\"?mode=all\">How many people?</a></p>\n");
 
 	while ($curValue = current($ipCounts)) {
 		$curIp = key($ipCounts);
 		print("<!-- $curIp ($curValue total) -->\n");
 		next($ipCounts);
 
-		// depending on how long people stay interested, this might need pagination too
 		for($i = 0; $i < $allCount; $i++) {
 			$curImg = $all[$i];
 			if(strstr($curImg, $curIp)) {

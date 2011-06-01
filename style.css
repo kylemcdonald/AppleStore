@@ -1,20 +1,20 @@
 body{
-	background-color: #000000;
+	background-color: #a68f55;
 	font-family: "Trebuchet MS", sans-serif;
 }
 p {
-	background-color: #00888E;
+	background-color: #59594c;
 	padding: 1em;
 	color: #FFFFFF;
 }
 a:visited {
-	color: #EB9E00;
+	color: #a68f65;
 }
 a:link {
-	color: #EB6C00;
+	color: #f3e6b2;
 }
 a:hover {
-	color: #EB0600;
+	color: #172856;
 }
 .header {
 	font-weight: bold;
