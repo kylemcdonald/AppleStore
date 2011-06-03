@@ -28,6 +28,6 @@ a:hover {
 	font-size: 75%;
 }
 img {
-	width: 48%;
-	max-width: 480px;
+	width: 320 px;
+	max-width: 100%;
 }
