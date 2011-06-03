@@ -1,4 +1,4 @@
-body{
+body {
 	background-color: #a68f55;
 	font-family: "Trebuchet MS", sans-serif;
 }
@@ -28,6 +28,5 @@ a:hover {
 	font-size: 75%;
 }
 img {
-	width: 320px;
-	max-width: 48%;
+	width: 32%;
 }
