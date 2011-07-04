@@ -92,5 +92,17 @@ if($mode == "all") {
 
 ?>
 
+
+<!-- Start of StatCounter Code -->
+<script type="text/javascript">
+sc_project=830491; 
+sc_invisible=1; 
+sc_partition=6; 
+sc_security="436f22b9"; 
+</script>
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter.js"></script>
+<!-- End of StatCounter Code -->
+
 	</body>
 </html>
