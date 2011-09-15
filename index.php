@@ -41,11 +41,7 @@ for($i = 0; $i < $perPage;) {
 				if($width != 0) {
 						print(" width=\"$width\"");
 				}
-				$parts = explode(":", $all[cur]);
-				$curTime = (int) $parts[0];
-				print("/>");
-				print(date('F d Y', $curTime));
-				print("</a>\n");
+				print("/></a>\n");
 				$i++;
 				$cur++;
 		} else {
