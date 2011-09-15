@@ -28,7 +28,7 @@ $width = intval($_GET["width"]);
 $perPage = intval($_GET["perpage"]);
 
 if(!$perPage) {
-	$perPage = 60;
+	$perPage = 120;
 }
 
 print("\t\t<p class=\"info\">$n people are staring at computers.</p>\n");
