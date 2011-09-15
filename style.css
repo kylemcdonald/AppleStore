@@ -1,35 +1,19 @@
 body {
 	font-family: "Trebuchet MS", sans-serif;
 }
-p {
-	background-color: #59594c;
-	padding: 1em;
-	font-size: 150%;
-	color: #FFFFFF;
-}
 
-a:visited {
-	color: #a68f65;
-}
-a:link {
-	color: #f3e6b2;
-}
-a:hover {
-	color: #172856;
-}
-
-.header {
-	font-weight: bold;
-	font-size: 120%;
-}
-.header a {
-	/*color: #FFFFFF;*/
-	text-decoration: none;
-}
-.info {
-	font-size: 120%;
-}
 img {
-	width: 320px;
+	position: relative;
+	top: 2px;
 	max-width: 100%;
+	margin: 0;
+	border: 0;
+}
+a {
+	padding: 0;
+	margin: 0;
+}
+.cell {
+	width: 18%;
+	padding: 3px;
 }
