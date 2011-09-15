@@ -26,71 +26,33 @@ if($n > 0) {
 $cur = intval($_GET["start"]);
 $width = intval($_GET["width"]);
 $perPage = intval($_GET["perpage"]);
-$mode = $_GET["mode"];
 
 if(!$perPage) {
 	$perPage = 60;
 }
 
-if(!$mode) {
-	$mode = "all";
+print("\t\t<p class=\"info\">$n people are staring at computers.</p>\n");
+
+// pagination could be cleaner, it's weird because i was doing it very wrong before
+for($i = 0; $i < $perPage;) {
+		if($cur < $n) {
+				$file = "images/$all[$cur]";
+				print("\t\t<a href=\"$file\"><img src=\"$file\"");
+				if($width != 0) {
+						print(" width=\"$width\"");
+				}
+				print("/></a>\n");
+				$i++;
+				$cur++;
+		} else {
+				break;
+		}
 }
 
-if($mode == "all") {
-	print("\t\t<p class=\"info\">$n people are staring at computers. <a href=\"?mode=each\">How many locations?</a></p>\n");
-
-	// pagination could be cleaner, it's weird because i was doing it very wrong before
-	for($i = 0; $i < $perPage;) {
-			if($cur < $n) {
-					$file = "images/$all[$cur]";
-					print("\t\t<a href=\"$file\"><img src=\"$file\"");
-					if($width != 0) {
-							print(" width=\"$width\"");
-					}
-					print("/></a>\n");
-					$i++;
-					$cur++;
-			} else {
-					break;
-			}
-	}
-
-	if($cur < $n) {
-			$nextPage = 1 + intval(ceil($cur / $perPage));
-			$total = intval(ceil($n / $perPage));
-			print("\t\t<a href=\"?start=$cur\"><p>Click here for page $nextPage of $total</p></a>");
-	}
-} else if($mode == "each") {
-	$allCount = count($all);
-	for($i = 0; $i < $allCount; $i++) {
-		$cur = $all[$i];
-		$parts = explode(":", $cur);
-		$ips[] = (string) substr($parts[1], 0, -4);
-	}
-
-	$ipCounts = array_count_values($ips);
-	$uniqueCount = count($ipCounts);
-
-	print("\t\t<p class=\"info\">People are staring at computers in $uniqueCount locations. <a href=\"?mode=all\">How many people?</a></p>\n");
-
-	while ($curValue = current($ipCounts)) {
-		$curIp = key($ipCounts);
-		print("<!-- $curIp ($curValue total) -->\n");
-		next($ipCounts);
-
-		for($i = 0; $i < $allCount; $i++) {
-			$curImg = $all[$i];
-			if(strstr($curImg, $curIp)) {
-					$file = "images/$curImg";
-					print("\t\t<a href=\"$file\"><img src=\"$file\"");
-					if($width != 0) {
-							print(" width=\"$width\"");
-					}
-					print("/></a>\n");
-				break;
-			}
-		}
-	}
+if($cur < $n) {
+		$nextPage = 1 + intval(ceil($cur / $perPage));
+		$total = intval(ceil($n / $perPage));
+		print("\t\t<a href=\"?start=$cur\"><p>Click here for page $nextPage of $total</p></a>");
 }
 
 ?>
