@@ -2,11 +2,11 @@
 <html>
 	<head>
 		<meta charset="utf-8"/>
-		<title>Apple Store</title>
+		<title>People Staring at Computers</title>
 		<link rel="stylesheet" href="style.css" type="text/css"/>
 	</head>
 	<body>
-		<p><span class="header"><a href="http://kylemcdonald.net/applestore/">Apple Store</a></span> is a project by <a href="http://kylemcdonald.net/">Kyle McDonald</a> that automatically posts pictures of people staring at computers.</p>
+		<p><span class="header"><a href="http://kylemcdonald.net/psac/">People Staring at Computers</a></span> was a photographic intervention by <a href="http://kylemcdonald.net/">Kyle McDonald</a> that automatically posts pictures of people in computer stores around NYC. A custom app was used that took a picture each minute and uploaded it. Photos were then exhibited on siteg b, full screen, on every computer.</p>
 
 <?php
 $dir = opendir("images");
