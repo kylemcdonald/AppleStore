@@ -17,9 +17,12 @@ while($cur = readdir($dir)) {
 }
 closedir($dir);
 
-rsort($all);
-
 $n = count($all);
+
+if($n > 0) {
+	rsort($all);
+}
+
 $cur = intval($_GET["start"]);
 $width = intval($_GET["width"]);
 $perPage = intval($_GET["perpage"]);
