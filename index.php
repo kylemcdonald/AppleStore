@@ -47,11 +47,11 @@ print("$n people are staring at computers.");
 for($i = 0; $i < $perPage;) {
 		if($cur < $n) {
 				$file = "images/$all[$cur]";
-				print("\t\t<a href=\"$file\"><img src=\"$file\"");
+				print("\t\t<div class=\"cell\"><a href=\"$file\"><img src=\"$file\"");
 				if($width != 0) {
 						print(" width=\"$width\"");
 				}
-				print("/></a>\n");
+				print("/></a></div>\n");
 				$i++;
 				$cur++;
 		} else {
@@ -62,7 +62,7 @@ for($i = 0; $i < $perPage;) {
 if($cur < $n) {
 		$nextPage = 1 + intval(ceil($cur / $perPage));
 		$total = intval(ceil($n / $perPage));
-		print("\t\t<div class=\"cell\"><a href=\"?start=$cur\"><p>Click here for page $nextPage of $total</p></a></div>");
+		print("\t\t<a href=\"?start=$cur\"><p>Click here for page $nextPage of $total</p></a>");
 }
 
 ?>
