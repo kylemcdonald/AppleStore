@@ -16,4 +16,5 @@ a {
 .cell {
 	width: 18%;
 	padding: 3px;
+	min-width: 256px;
 }
