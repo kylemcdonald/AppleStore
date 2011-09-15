@@ -43,7 +43,7 @@ for($i = 0; $i < $perPage;) {
 				}
 				$parts = explode(":", $cur);
 				print("/>");
-				print(date('F d Y', $parts[0]);
+				print(date('F d Y', $parts[0]));
 				print("</a>\n");
 				$i++;
 				$cur++;
