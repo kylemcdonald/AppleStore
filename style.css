@@ -1,12 +1,13 @@
 body {
-	background-color: #a68f55;
 	font-family: "Trebuchet MS", sans-serif;
 }
 p {
 	background-color: #59594c;
 	padding: 1em;
+	font-size: 150%;
 	color: #FFFFFF;
 }
+
 a:visited {
 	color: #a68f65;
 }
@@ -16,16 +17,17 @@ a:link {
 a:hover {
 	color: #172856;
 }
+
 .header {
 	font-weight: bold;
 	font-size: 120%;
 }
 .header a {
-	color: #FFFFFF;
+	/*color: #FFFFFF;*/
 	text-decoration: none;
 }
 .info {
-	font-size: 75%;
+	font-size: 120%;
 }
 img {
 	width: 320px;
