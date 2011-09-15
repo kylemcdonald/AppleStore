@@ -62,7 +62,7 @@ for($i = 0; $i < $perPage;) {
 if($cur < $n) {
 		$nextPage = 1 + intval(ceil($cur / $perPage));
 		$total = intval(ceil($n / $perPage));
-		print("\t\t<div class="cell"><a href=\"?start=$cur\"><p>Click here for page $nextPage of $total</p></a></div>");
+		print("\t\t<div class=\"cell\"><a href=\"?start=$cur\"><p>Click here for page $nextPage of $total</p></a></div>");
 }
 
 ?>
