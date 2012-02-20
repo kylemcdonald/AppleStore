@@ -16,7 +16,8 @@
 			</div>
 			<ul><li>
 <?php
-$dir = opendir("images");
+$peopleDir = "people"
+$dir = opendir($peopleDir);
 while($cur = readdir($dir)) {
 	if($cur[0] != "." && $cur != "") {
     $all[] = $cur;
@@ -46,7 +47,7 @@ print("$n people are staring at computers.");
 // pagination could be cleaner, it's weird because i was doing it very wrong before
 for($i = 0; $i < $perPage;) {
 		if($cur < $n) {
-				$file = "images/$all[$cur]";
+				$file = "$peopleDir/$all[$cur]";
 				print("\t\t<div class=\"cell\"><a href=\"$file\"><img src=\"$file\"");
 				if($width != 0) {
 						print(" width=\"$width\"");
