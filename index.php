@@ -16,7 +16,7 @@
 			</div>
 			<ul><li>
 <?php
-$peopleDir = "people"
+$peopleDir = "people";
 $dir = opendir($peopleDir);
 while($cur = readdir($dir)) {
 	if($cur[0] != "." && $cur != "") {
