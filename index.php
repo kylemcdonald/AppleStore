@@ -52,7 +52,7 @@ print("$n people are staring at computers.");
 for($i = 0; $i < $perPage;) {
 		if($cur < $n) {
 				$file = "$peopleDir/$all[$cur]";
-				print("\t\t<div class=\"cell\"><a href=\"$file\" rel=\"lightbox\"><img src=\"$file\"");
+				print("\t\t<div class=\"cell\"><a href=\"$file\" rel=\"lightbox[people]\"><img src=\"$file\"");
 				if($width != 0) {
 						print(" width=\"$width\"");
 				}
