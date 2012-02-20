@@ -4,7 +4,11 @@
 		<meta charset="utf-8"/>
 		<title>People Staring at Computers</title>
 		<link rel="stylesheet" href="../style.css" type="text/css"/>
-		<link rel="stylesheet" href="style.css" type="text/css"/>
+		<link rel="stylesheet" href="css/style.css" type="text/css"/>
+		<link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" />
+		<script type="text/javascript" src="js/prototype.js"></script>
+		<script type="text/javascript" src="js/scriptaculous.js?load=effects,builder"></script>
+		<script type="text/javascript" src="js/lightbox.js"></script>
 	</head>
 	<body>
 		<div class="section">
@@ -16,7 +20,7 @@
 			</div>
 			<ul><li>
 <?php
-$peopleDir = "people";
+$peopleDir = "images";
 $dir = opendir($peopleDir);
 while($cur = readdir($dir)) {
 	if($cur[0] != "." && $cur != "") {
@@ -48,7 +52,7 @@ print("$n people are staring at computers.");
 for($i = 0; $i < $perPage;) {
 		if($cur < $n) {
 				$file = "$peopleDir/$all[$cur]";
-				print("\t\t<div class=\"cell\"><a href=\"$file\"><img src=\"$file\"");
+				print("\t\t<div class=\"cell\"><a href=\"$file\" rel=\"lightbox\"><img src=\"$file\"");
 				if($width != 0) {
 						print(" width=\"$width\"");
 				}
